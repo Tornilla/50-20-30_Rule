@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+    <head>
+        <title>homepage</title>
+        <link rel="stylesheet" type="text/css" href="budget.css">
+    </head>
+    <body>
+        <form>
+            <input type="number" name="salary" id="salary" placeholder="Enter salary">
+            <button onclick="getSalary()" type="button">submit</button>
+        </form>
+        <script>
+            function getSalary(){
+                var inputSalary = document.getElementById("salary");
+                var valueSalary = inputSalary.value;
+                var salary = valueSalary;
+                console.log(salary);
+
+                var needs = 50;
+                var wants = 30;
+                var savings = 20;
+
+                var needs = (salary * needs) / 100;
+                var wants = (salary * wants) / 100;
+                var savings = (salary * savings) / 100;
+
+                document.getElementById("needs").value= + needs;
+                document.getElementById("wants").value=+wants;
+                document.getElementById("savings").value=savings;
+            }
+
+
+        </script>
+
+        <hr>
+
+        <div id="summary">
+            <table>
+                <tr>
+                    <td>50%</td>
+                    <td>30%</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>NEEDS</td>
+                    <td>WANTS</td>
+                    <td>SAVINGS</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="needs" disabled>
+                    </td>
+                    <td>
+                        <input type="text" id="wants" disabled>
+                    </td>
+                    <td>
+                        <input type="text" id="savings" disabled>
+                    </td>
+                </tr>
+            </table>
+            <div id="balance">
+                <p>Balance</p>
+                <input type="text" id="balance" disabled>
+            </div>
+        </div>
+        <!-- <button id="addbudget">add budget</button>
+
+        <div id="budgetModal" class="modal">
+            <div id="budget-container">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Add Budget</h2>
+                <p>add budget na to</p>
+                <form>
+                    <input type="text" name="description" id="description" placeholder="budget name">
+                    <input type="number" name="budget" id="budget" placeholder="peso">
+                    <input type="number" name="percentage" id="percentage" placeholder="Enter percentage">
+                    <button onclick="submitbudget()" type="button">add budget</button>
+                </form>
+                <script>
+                    function submitbudget(){
+                        var desc = document.getElementById("description");
+                        var description = desc.value;
+                        var budget = document.getElementById("budget");
+                        var budgetPercent = document.getElementById("percentage");
+                        var budgetPercentage = budgetPercent.value;
+                        var maxpercent = 100;
+                        console.log(description);
+                        // console.log(budget);
+                        console.log(budgetPercentage);
+
+                        if(budgetPercentage>100){
+                            alert("maximum percent is 100!");
+                        }
+
+                        var output = description + " " + budgetPercentage + "%";
+                        var outputDiv = document.createElement("div");
+                        outputDiv.innerHTML=output;
+                        document.getElementById("budgetsOutput").appendChild(outputDiv);
+                        document.getElementById("description").value="";
+                        document.getElementById("percentage").value="";
+
+                        
+
+                        
+                    }
+                </script>
+            </div>
+        </div>
+        <script>
+            var addbudget = document.getElementById("addbudget");
+            var budget = document.getElementById("budgetModal");
+            var closeModal = document.getElementById("closeModal");
+
+            addbudget.addEventListener("click", function(){
+                budgetModal.style.display="block";
+            });
+
+            closeModal.addEventListener("click", function(){
+                budgetModal.style.display="none";
+            });
+
+            window.addEventListener("click", function(){
+                if (event.target === budget){
+                    budgetModal.style.display="none";
+                }
+            });
+        </script>
+<hr> -->
+        <!-- <div id="budgets">
+            <h1>budgets</h1>
+            <div id="budgetsOutput">
+
+            </div>
+            <button onclick="compute()">compute</button>
+            <button onclick="reset()">restart budget</button>
+            <script>
+                function reset(){
+                    document.getElementById("budgetsOutput").innerHTML = "";
+                }
+
+                function compute(){
+                    var summary = budgetPercentage / 100;
+                    var summary = salary / summary
+                }
+            </script>
+        </div>
+
+        <div id="computed">
+            <h1>summary</h1>
+            <div id="summary">
+
+            </div>
+        </div> -->
+    </body>
+</html>
