@@ -5,10 +5,14 @@
         <link rel="stylesheet" type="text/css" href="budget.css">
     </head>
     <body>
-        <form>
-            <input type="number" name="salary" id="salary" placeholder="Enter salary">
-            <button onclick="getSalary()" type="button">submit</button>
-        </form>
+        <div id="inputs-container">
+            <form>
+                <input type="number" name="salary" id="salary" placeholder="Enter salary">
+                <button onclick="getSalary()" type="button" id="salarybtn">SUBMIT</button>
+                <button onclick="clearinput()" type="button" id="clearbtn">CLEAR</button>
+            </form>
+        </div>
+        
         <script>
             function getSalary(){
                 var inputSalary = document.getElementById("salary");
@@ -29,7 +33,13 @@
                 document.getElementById("savings").value=savings;
             }
 
-
+            function clearinput(){
+                document.getElementById("salary").value= "";
+                document.getElementById("needs").value= "";
+                document.getElementById("wants").value= "";
+                document.getElementById("savings").value= "";
+                console.log("clear button clicked");
+            }
         </script>
 
         <hr>
@@ -58,10 +68,10 @@
                     </td>
                 </tr>
             </table>
-            <div id="balance">
+            <!-- <div id="balance">
                 <p>Balance</p>
                 <input type="text" id="balance" disabled>
-            </div>
+            </div> -->
         </div>
         <!-- <button id="addbudget">add budget</button>
 

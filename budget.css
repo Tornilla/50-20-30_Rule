@@ -1,3 +1,6 @@
+*{
+    font-family: sans-serif;
+}
 html{
     padding: 0;
     margin: 0;
@@ -5,7 +8,75 @@ html{
 body{
     padding: 0;
     margin: 0;
+    background-image: linear-gradient(aqua, orange);
 }
-#budgetModal{
-    display: none;
+#inputs-container{
+    display: flex;
+    height: 30%;
+    margin: 50px 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#inputs-container form{
+    width: 100%;
+}
+#inputs-container form input{
+    height: 50px;
+    width: 25%;
+    border: hidden;
+    border-radius: 15px;
+}
+#salary::placeholder{
+    font-size: 30px;
+    text-align: center;
+}
+#salary{
+ font-size: 30px;
+ text-align: center;
+}
+#inputs-container form input,
+#inputs-container form button {
+    display: block;
+    margin: 3% auto; /* Adds spacing between input and button and centers them */
+}
+  
+#salarybtn{
+    color: #fff;
+    font-size: 30px;
+    height: 50px;
+    width: 25%;
+    margin-bottom: 1% !important;
+    border: hidden;
+    border-radius: 50px;
+    background-color: rgb(0, 206, 206);
+}
+#clearbtn{
+    color: #fff;
+    font-size: 30px;
+    height: 50px;
+    width: 25%;
+    margin: 0 auto !important;
+    border: hidden;
+    border-radius: 50px;
+    background-color: rgb(0, 206, 206);
+}
+
+#summary table,
+#summary #balance{
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#summary td input{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+    border: hidden;
+    border-radius: 15px;
 }
