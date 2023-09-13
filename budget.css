@@ -80,3 +80,21 @@ body{
     border: hidden;
     border-radius: 15px;
 }
+
+@media only screen and (max-width: 1123px){
+    #summary td input{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    #inputs-container form input{
+        width: 50%;
+    }
+    #salarybtn{
+        width: 50%;
+    }
+    #clearbtn{
+        width: 50%;
+    }
+}
