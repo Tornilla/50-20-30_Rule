@@ -98,3 +98,15 @@ body{
         width: 50%;
     }
 }
+
+@media only screen and (max-width:200px){
+    #inputs-container form input{
+        width: 50%;
+    }
+    #salarybtn{
+        width: 50%;
+    }
+    #clearbtn{
+        width: 50%;
+    }
+}
